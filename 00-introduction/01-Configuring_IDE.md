@@ -25,9 +25,14 @@ Type on command prompt:
 ``` 
 This will create a "main.exe" file that is executable
 
-To execute the file, go to project folder and type:
+To execute the file, go to project folder on command prompt and type:
 ```console
-> main
+> main.exe 
+``` 
+
+OBS: to run the executable file in a PowerShell prompt, type:
+```console
+> .\main.exe 
 ``` 
 
 # C++ compiler on Linux
@@ -109,35 +114,24 @@ To select a different active project, just right click on project and click on "
 - Install C/C++ Extension from Microsoft
 - Open VS Code Command Palette (Crtl+Shift+P)
 - Type C/C++:Edit Configuration(UI)
-- On Compiler Path, use "/usr/bin/g++"
+- On Compiler Path, use "c:\Program files\mingw64\bin\g++.exe"
 - On C++ standard, use c++17
 > This will create a c_cpp_properties.json file
-- With a .cpp file open, go to menu, Click on "Terminal --> Configure Default Build Task..." and select "C/C++:g++ build active file"
+- With a .cpp file open, go to menu, Click on "Terminal --> Configure Default Build Task..." and select "C/C++:g++.exe build active file"
 > This will create a task.json file
 - Go tasks.json and change "args" to:
 ```json
-"args": [
-    "-fdiagnostics-color=always",
+"args": [    
     "-g",
     "-Wall",
     "-std=c++17",
-    "${fileDirname}/*.cpp",
+    "${fileDirname}\\*.cpp",
     "-o",
-    "${fileDirname}/${fileBasenameNoExtension}"
+    "${fileDirname}\\${fileBasenameNoExtension}.exe"
 ],
 ```
 > This "*.cpp" will make VS code compile wall .cpp files
 > Normally it just compile only the active .cpp file
-
-## Compile C++ Project on VS Code on Windows
-- Select a .cpp file inside project folder
-- Go to Terminal Menu and click on "Run Build Task"
-
-## Debugging C++ Project on VS Code on Windows
-
-
-
-
 
 ## Install and configure VS Code on Linux
 - Go to Visual Studio Code website, download it and see install instructions
@@ -151,8 +145,7 @@ To select a different active project, just right click on project and click on "
 > This will create a task.json file
 - Go tasks.json and change "args" to:
 ```json
-"args": [
-    "-fdiagnostics-color=always",
+"args": [    
     "-g",
     "-Wall",
     "-std=c++17",
@@ -169,5 +162,11 @@ To select a different active project, just right click on project and click on "
 - Go to Terminal Menu and click on "Run Build Task"
 
 ## Debugging C++ Project on VS Code on Linux
+ - Select a .cpp file
+ - Go to Run menu, click on "Add Configuration"
+ - Select "C++(GDB/LLDB)" environment
+ - Select "g++ - Build and debug active file" configuration
+> This will create a launch.json file
+
 
 
