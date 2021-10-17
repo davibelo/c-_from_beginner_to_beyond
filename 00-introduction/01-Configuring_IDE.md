@@ -133,6 +133,50 @@ To select a different active project, just right click on project and click on "
 > This "*.cpp" will make VS code compile wall .cpp files
 > Normally it just compile only the active .cpp file
 
+## Compile C++ Project on VS Code on Windows
+- Select a .cpp file inside project folder
+- Go to Terminal Menu and click on "Run Build Task"
+
+## Debugging C++ Project on VS Code on Windows
+ - Select a .cpp file
+ - Go to Run menu, click on "Add Configuration"
+ - Select "C++(GDB/LLDB)" environment
+ - Select "g++.exe - Build and debug active file" configuration
+> This will create a launch.json file
+- Make sure launch.json file is like this:
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++.exe - Build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++.exe build active file",
+            "miDebuggerPath": "C:\Program Files\\mingw64\\bin\\gdb.exe"
+        }
+    ]
+}
+```
+- Use Debug button on the right bar
+- When debugging you can click on left of line numbers on code file and create a breakpoint
+- Use top commands to decide how you want to procede on code execution
+
+
 ## Install and configure VS Code on Linux
 - Go to Visual Studio Code website, download it and see install instructions
 - Install C/C++ Extension from Microsoft
@@ -167,6 +211,40 @@ To select a different active project, just right click on project and click on "
  - Select "C++(GDB/LLDB)" environment
  - Select "g++ - Build and debug active file" configuration
 > This will create a launch.json file
+- Make sure launch.json file is like this:
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++ - Build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++ build active file",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
+```
+- Use Debug button on the right bar
+- When debugging you can click on left of line numbers on code file and create a breakpoint
+- Use top commands to decide how you want to procede on code execution
+
+
 
 
 
