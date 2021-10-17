@@ -17,7 +17,7 @@ On installation process, pay atencion on:
 > You can use your account Path variable or system Path variable if you are a system administrator, just pay atencion to not delete any other paths inside variable
 
 
-# Compiling using command line on Windows
+## Compiling using command line on Windows
 
 Type on command prompt:
 ```console
@@ -52,7 +52,7 @@ $ sudo apt install build-essential
 $ g++ -- version
 ``` 
 
-# Compiling using command line on Linux
+## Compiling using command line on Linux
 
 Type on terminal:
 ```console
@@ -65,7 +65,7 @@ To execute the file, go to project folder and type:
 $ ./main
 ``` 
 
-# CodeLite
+# Using CodeLite as C++ IDE
 Go to CodeLite website and follow installation instructions for your operating system
 
 ## Configuring CodeLite
@@ -107,7 +107,7 @@ CodeLite will always build and run the active project
 
 To select a different active project, just right click on project and click on "make active" or simply double click on it
 
-# Visual Studio Code (VS Code)
+# Using Visual Studio Code (VS Code) as C++ IDE
 
 ## Install and configure VS Code on Windows
 - Go to Visual Studio Code website, download it and see install instructions
