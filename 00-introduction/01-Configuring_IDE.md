@@ -19,9 +19,19 @@ On installation process, pay atencion on:
 
 # Compiling using command line on Windows
 
+Type on command prompt:
+```console
+> g++ -Wall -std=c++14 main.cpp -o main.exe
+``` 
+This will create a "main.exe" file that is executable
 
+To execute the file, go to project folder and type:
+```console
+> main
+``` 
 
 # C++ compiler on Linux
+
 - Update packages first
 ```console
 $ sudo apt update
@@ -45,7 +55,7 @@ $ g++ -Wall -std=c++14 main.cpp -o main
 ``` 
 This will create a "main" file that is executable
 
-To execute the file:
+To execute the file, go to project folder and type:
 ```console
 $ ./main
 ``` 
@@ -94,5 +104,70 @@ To select a different active project, just right click on project and click on "
 
 # Visual Studio Code (VS Code)
 
+## Install and configure VS Code on Windows
+- Go to Visual Studio Code website, download it and see install instructions
+- Install C/C++ Extension from Microsoft
+- Open VS Code Command Palette (Crtl+Shift+P)
+- Type C/C++:Edit Configuration(UI)
+- On Compiler Path, use "/usr/bin/g++"
+- On C++ standard, use c++17
+> This will create a c_cpp_properties.json file
+- With a .cpp file open, go to menu, Click on "Terminal --> Configure Default Build Task..." and select "C/C++:g++ build active file"
+> This will create a task.json file
+- Go tasks.json and change "args" to:
+```json
+"args": [
+    "-fdiagnostics-color=always",
+    "-g",
+    "-Wall",
+    "-std=c++17",
+    "${fileDirname}/*.cpp",
+    "-o",
+    "${fileDirname}/${fileBasenameNoExtension}"
+],
+```
+> This "*.cpp" will make VS code compile wall .cpp files
+> Normally it just compile only the active .cpp file
+
+## Compile C++ Project on VS Code on Windows
+- Select a .cpp file inside project folder
+- Go to Terminal Menu and click on "Run Build Task"
+
+## Debugging C++ Project on VS Code on Windows
+
+
+
+
+
+## Install and configure VS Code on Linux
+- Go to Visual Studio Code website, download it and see install instructions
+- Install C/C++ Extension from Microsoft
+- Open VS Code Command Palette (Crtl+Shift+P)
+- Type C/C++:Edit Configuration(UI)
+- On Compiler Path, use "/usr/bin/g++"
+- On C++ standard, use c++17
+> This will create a c_cpp_properties.json file
+- With a .cpp file open, go to menu, Click on "Terminal --> Configure Default Build Task..." and select "C/C++:g++ build active file"
+> This will create a task.json file
+- Go tasks.json and change "args" to:
+```json
+"args": [
+    "-fdiagnostics-color=always",
+    "-g",
+    "-Wall",
+    "-std=c++17",
+    "${fileDirname}/*.cpp",
+    "-o",
+    "${fileDirname}/${fileBasenameNoExtension}"
+],
+```
+> This "*.cpp" will make VS code compile wall .cpp files
+> Normally it just compile only the active .cpp file
+
+## Compile C++ Project on VS Code on Linux
+- Select a .cpp file inside project folder
+- Go to Terminal Menu and click on "Run Build Task"
+
+## Debugging C++ Project on VS Code on Linux
 
 
