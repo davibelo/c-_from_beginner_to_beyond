@@ -1,4 +1,4 @@
-## C++ compiler on Windows
+# C++ compiler on Windows
 
 A example of compiler that can be used on windows is Mingw-w64 (https://www.mingw-w64.org/)
 
@@ -16,7 +16,12 @@ On installation process, pay atencion on:
 
 > You can use your account Path variable or system Path variable if you are a system administrator, just pay atencion to not delete any other paths inside variable
 
-## C++ compiler on Linux
+
+# Compiling using command line on Windows
+
+
+
+# C++ compiler on Linux
 - Update packages first
 ```console
 $ sudo apt update
@@ -30,6 +35,19 @@ $ sudo apt install build-essential
 - Test installation:
 ```console
 $ g++ -- version
+``` 
+
+# Compiling using command line on Linux
+
+Type on terminal:
+```console
+$ g++ -Wall -std=c++14 main.cpp -o main
+``` 
+This will create a "main" file that is executable
+
+To execute the file:
+```console
+$ ./main
 ``` 
 
 # CodeLite
@@ -55,7 +73,24 @@ Go to CodeLite website and follow installation instructions for your operating s
 - Right-Click on Project, choose Settings, go on Compiler, C++ Compiler options, click on the button on the right and choose: C++17 features, optimize for debugging, produce debugging information
 - Click on Linker --> Linker options and type "-static"
 
+### CodeLite template
 
+#### Creating a project template:
+After configuring all those options above:
+- Right click on project and click on "Save As Template"
+- Name it and choose category "User Templates"
+
+#### Using a project tempĺate:
+- Right-click on Workspace, Click on "New --> New project"
+- Choose category "User Templates"
+- Select your template on "Type"
+
+## CodeLite Active Project
+In a workspace with more than one project, you will notice a bold/italic project. This is the active project. 
+
+CodeLite will always build and run the active project
+
+To select a different active project, just right click on project and click on "make active" or simply double click on it
 
 # Visual Studio Code (VS Code)
 
