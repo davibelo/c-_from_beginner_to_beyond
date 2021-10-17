@@ -176,6 +176,7 @@ To select a different active project, just right click on project and click on "
 - When debugging you can click on left of line numbers on code file and create a breakpoint
 - Use top commands to decide how you want to procede on code execution
 
+REMEMBER: This configuration is made for the main folder of VSCode that contains the project folders. It is possible to copy files on .vscode folder to a new main folder
 
 ## Install and configure VS Code on Linux
 - Go to Visual Studio Code website, download it and see install instructions
@@ -244,7 +245,7 @@ To select a different active project, just right click on project and click on "
 - When debugging you can click on left of line numbers on code file and create a breakpoint
 - Use top commands to decide how you want to procede on code execution
 
-
+REMEMBER: This configuration is made for the main folder of VSCode that contains the project folders. It is possible to copy files on .vscode folder to a new main folder
 
 
 
