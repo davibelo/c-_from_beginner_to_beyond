@@ -55,6 +55,8 @@ Go to CodeLite website and follow installation instructions for your operating s
 - Right-Click on Project, choose Settings, go on Compiler, C++ Compiler options, click on the button on the right and choose: C++17 features, optimize for debugging, produce debugging information
 - Click on Linker --> Linker options and type "-static"
 
+
+
 # Visual Studio Code (VS Code)
 
 
