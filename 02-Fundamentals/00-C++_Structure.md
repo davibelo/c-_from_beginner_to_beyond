@@ -26,7 +26,7 @@ There are 4 main types of preprocessor directives:
 Concept Example: 
 Use preprocessor directives to test the Operational System that you are running the code and adding some libraries according to it
 
-> Remember these directives are not cpp statements
+> Remember these directives are not c++ statements
 
 ## Macros
 Macros are a piece of code in a program which is given some name. Whenever this name is encountered by the compiler the compiler replaces the name with the actual piece of code. The ‘#define’ directive is used to define a macro. Let us now understand the macro definition with the help of a program:
@@ -45,6 +45,7 @@ int main()
     return 0;
 }
 ```
+> #undef directive can be used to undefine macro
 
 ## Macros with arguments
 We can also pass arguments to macros. Macros defined with arguments works similarly as functions. Let us understand this with a program: 
@@ -89,10 +90,6 @@ Conditional Compilation directives are type of directives which helps to compile
     statementN;
 #endif
 ```
-# C++ Main Function
-The main function is called at program startup after initialization of the non-local objects with static storage duration. It is the designated entry point to a program that is executed in hosted environment (that is, with an operating system)
-
-All C++ programs must have a main function. If you try to compile a C++ program without a main function, the compiler raises an error. (Dynamic-link libraries and static libraries don't have a main function.) 
 
 # C++ Comments
 Comments can be used to explain C++ code, and to make it more readable. It can also be used to prevent execution when testing alternative code. Comments can be singled-lined or multi-lined.
@@ -100,6 +97,13 @@ Single-line Comments
 
 - Single-line comments start with two forward slashes (//).
 - Multi-line comments start with /* and ends with */.
+
+# C++ Main Function
+The main function is called at program startup after initialization of the non-local objects with static storage duration. It is the designated entry point to a program that is executed in hosted environment (that is, with an operating system)
+
+All C++ programs must have a main function. If you try to compile a C++ program without a main function, the compiler raises an error. (Dynamic-link libraries and static libraries don't have a main function.) 
+
+
 
 # C++ Variables
 Variables are containers for storing data values.
