@@ -1,8 +1,8 @@
 # C++ General References
-https://en.cppreference.com/w/
-https://www.w3schools.com/cpp/default.asp
-https://www.geeksforgeeks.org/c-plus-plus/?ref=shm
-https://docs.microsoft.com/en-us/cpp/cpp/?view=msvc-170
+- https://en.cppreference.com/w/
+- https://www.w3schools.com/cpp/default.asp
+- https://www.geeksforgeeks.org/c-plus-plus/?ref=shm
+- https://docs.microsoft.com/en-us/cpp/cpp/?view=msvc-170
 
 # C++ Keywords
 This is a list of reserved keywords in C++. Since they are used by the language, these keywords are not available for re-definition or overloading. 
@@ -89,11 +89,6 @@ Conditional Compilation directives are type of directives which helps to compile
     statementN;
 #endif
 ```
-
-Sources: 
-https://www.cplusplus.com/doc/tutorial/preprocessor/
-https://www.geeksforgeeks.org/cc-preprocessors/
-
 # C++ Main Function
 The main function is called at program startup after initialization of the non-local objects with static storage duration. It is the designated entry point to a program that is executed in hosted environment (that is, with an operating system)
 
@@ -119,5 +114,5 @@ In C++, there are different types of variables (defined with different keywords)
 
 # C++ Operators
 Operators are used to perform operations on variables and values.
-https://www.w3schools.com/cpp/cpp_operators.asp
+- https://www.w3schools.com/cpp/cpp_operators.asp
 
