@@ -7,7 +7,7 @@ Mingw-w64 is an advancement of the original mingw.org project, created to suppor
 The development and community are very active and welcoming with new contributors every month and simple installers.
 
 To use it, just download and install a windows version
-On installation process, pay atencion on: 
+On installation process, pay attention on: 
 - Select architecture according with your operating system (x86_64 for 64bits systems)
 - Select a directory to install (it is good to use a small folder name)
 - Set PATH variable to contain the mingw-w64 installation folder
@@ -167,7 +167,7 @@ To select a different active project, just right click on project and click on "
                 }
             ],
             "preLaunchTask": "C/C++: g++.exe build active file",
-            "miDebuggerPath": "C:\Program Files\\mingw64\\bin\\gdb.exe"
+            "miDebuggerPath": "C:\\Program Files\\mingw64\\bin\\gdb.exe"
         }
     ]
 }
